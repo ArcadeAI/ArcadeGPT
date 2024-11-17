@@ -1,7 +1,6 @@
-import { Message } from 'ai';
+import type { Message } from 'ai';
 import { toast } from 'sonner';
 import { useCopyToClipboard } from 'usehooks-ts';
-
 
 import { CopyIcon } from './icons';
 import { Button } from '../ui/button';
@@ -21,7 +20,6 @@ export function MessageActions({
   message: Message;
   isLoading: boolean;
 }) {
-  
   const [_, copyToClipboard] = useCopyToClipboard();
 
   if (isLoading) return null;

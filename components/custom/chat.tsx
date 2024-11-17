@@ -1,5 +1,5 @@
 'use client';
-import { CoreUserMessage } from 'ai';
+import type { CoreUserMessage } from 'ai';
 import { useChat } from 'ai/react';
 import { useEffect, useRef } from 'react';
 import { toast } from 'sonner';
@@ -12,7 +12,7 @@ import { useScrollToBottom } from '@/components/custom/use-scroll-to-bottom';
 
 import { MultimodalInput } from './multimodal-input';
 import { Overview } from './overview';
-import { Chats } from './sidebar-history';
+import type { Chats } from './sidebar-history';
 
 export function Chat({
   id,
@@ -26,7 +26,7 @@ export function Chat({
     { chats: [] },
     {
       initializeWithValue: false,
-    }
+    },
   );
   const previousMessagesLengthRef = useRef(0);
   const saveChatRef = useRef(false);
@@ -81,7 +81,7 @@ export function Chat({
             createdAt: new Date(),
             title: await generateTitleFromUserMessage({
               message: messages.find(
-                (message) => message.role === 'user'
+                (message) => message.role === 'user',
               ) as CoreUserMessage,
             }),
           };

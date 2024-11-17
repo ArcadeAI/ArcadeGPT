@@ -5,7 +5,7 @@ import { models } from '@/ai/models';
 import { auth } from '@/app/(auth)/auth';
 
 import { handleToolAuthorizations } from './tool-authorization';
-import { ChatRequestBody, ToolAuthorization } from './types';
+import type { ChatRequestBody, ToolAuthorization } from './types';
 
 export const maxDuration = 60;
 
@@ -63,8 +63,8 @@ export async function POST(request: Request) {
           console.error('Stream processing error:', error);
           controller.enqueue(
             new TextEncoder().encode(
-              '\n\n❌ An error occurred while processing your request.\n'
-            )
+              '\n\n❌ An error occurred while processing your request.\n',
+            ),
           );
         } finally {
           controller.close();

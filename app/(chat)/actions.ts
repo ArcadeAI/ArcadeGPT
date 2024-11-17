@@ -1,7 +1,7 @@
 'use server';
 
 import { createOpenAI } from '@ai-sdk/openai';
-import { CoreUserMessage, generateText } from 'ai';
+import { type CoreUserMessage, generateText } from 'ai';
 import { cookies } from 'next/headers';
 
 const arcade = createOpenAI({

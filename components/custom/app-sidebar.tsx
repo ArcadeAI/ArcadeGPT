@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { User } from 'next-auth';
+import type { User } from 'next-auth';
 
 import { PlusIcon } from '@/components/custom/icons';
 import { SidebarHistory } from '@/components/custom/sidebar-history';
@@ -30,11 +30,13 @@ export function AppSidebar({ user }: { user?: User }) {
         <SidebarMenu>
           <div className="flex flex-row justify-between items-center">
             <div
-              onClick={() => {
+              tabIndex={0}
+              onKeyDown={(e) => {
                 setOpenMobile(false);
                 router.push('/');
                 router.refresh();
               }}
+              role="button"
               className="flex flex-row gap-3 items-center"
             >
               <span className="text-lg font-semibold px-2 hover:bg-muted rounded-md cursor-pointer">

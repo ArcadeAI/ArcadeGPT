@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import Link from 'next/link';
-
-import { MessageIcon, VercelIcon } from './icons';
 
 export const Overview = () => {
   return (

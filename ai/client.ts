@@ -1,5 +1,5 @@
 import { OpenAI } from 'openai';
-import { CreateCompletionProps } from './types';
+import type { CreateCompletionProps } from './types';
 
 const BASE_URL =
   process.env.ARCADE_ENGINE_URL ?? 'https://api.arcade-ai.com/v1'; // Default to the cloud engine

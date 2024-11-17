@@ -1,6 +1,6 @@
-import { OpenAI } from 'openai';
+import type { OpenAI } from 'openai';
 
-import { Model } from '@/ai/models';
+import type { Model } from '@/ai/models';
 
 export interface ChatRequestBody {
   messages: Array<OpenAI.Chat.Completions.ChatCompletionMessageParam>;

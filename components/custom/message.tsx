@@ -1,8 +1,8 @@
 'use client';
 
-import { Message } from 'ai';
+import type { Message } from 'ai';
 import cx from 'classnames';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 import { SparklesIcon } from './icons';
 import { Markdown } from './markdown';
@@ -28,7 +28,7 @@ export const PreviewMessage = ({
     >
       <div
         className={cx(
-          'group-data-[role=user]/message:bg-primary group-data-[role=user]/message:text-primary-foreground flex gap-4 group-data-[role=user]/message:px-3 w-full group-data-[role=user]/message:w-fit group-data-[role=user]/message:ml-auto group-data-[role=user]/message:max-w-2xl group-data-[role=user]/message:py-2 rounded-xl'
+          'group-data-[role=user]/message:bg-primary group-data-[role=user]/message:text-primary-foreground flex gap-4 group-data-[role=user]/message:px-3 w-full group-data-[role=user]/message:w-fit group-data-[role=user]/message:ml-auto group-data-[role=user]/message:max-w-2xl group-data-[role=user]/message:py-2 rounded-xl',
         )}
       >
         {message.role === 'assistant' && (
@@ -115,7 +115,7 @@ export const ThinkingMessage = () => {
           'flex gap-4 group-data-[role=user]/message:px-3 w-full group-data-[role=user]/message:w-fit group-data-[role=user]/message:ml-auto group-data-[role=user]/message:max-w-2xl group-data-[role=user]/message:py-2 rounded-xl animate-pulse',
           {
             'group-data-[role=user]/message:bg-muted': true,
-          }
+          },
         )}
       >
         <div className="size-8 flex items-center rounded-full justify-center ring-1 shrink-0 ring-border">

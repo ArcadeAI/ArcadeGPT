@@ -1,6 +1,6 @@
 'use client';
 
-import { Message } from 'ai';
+import type { Message } from 'ai';
 import { isToday, isYesterday, subMonths, subWeeks } from 'date-fns';
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
@@ -105,7 +105,7 @@ export function SidebarHistory() {
     },
     {
       initializeWithValue: false,
-    }
+    },
   );
 
   const [deleteId, setDeleteId] = useState<string | null>(null);
@@ -171,7 +171,7 @@ export function SidebarHistory() {
         lastWeek: [],
         lastMonth: [],
         older: [],
-      } as GroupedChats
+      } as GroupedChats,
     );
   };
 
