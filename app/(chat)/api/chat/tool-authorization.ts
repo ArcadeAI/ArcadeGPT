@@ -46,7 +46,10 @@ export const checkToolAuthorization = async (
  * @param streamContext
  * @returns
  */
-export async function handleToolAuthorizations(streamContext: StreamContext) {
+export async function handleToolAuthorizations(
+  userId: string,
+  streamContext: StreamContext
+) {
   const { model, messages, encoder, controller, toolAuthorizations } =
     streamContext;
 
@@ -66,7 +69,7 @@ export async function handleToolAuthorizations(streamContext: StreamContext) {
           )
         );
 
-        const response = await createCompletion({ model, messages });
+        const response = await createCompletion({ userId, model, messages });
         for await (const chunk of response) {
           const content = chunk.choices[0]?.delta?.content || '';
           controller.enqueue(encoder.encode(content));

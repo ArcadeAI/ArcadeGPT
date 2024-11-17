@@ -39,7 +39,7 @@ export const PreviewMessage = ({
 
         <div className="flex flex-col gap-2 w-full">
           {message.content && (
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 flex-wrap [overflow-wrap:anywhere] [word-break:break-word]">
               <Markdown>{message.content as string}</Markdown>
             </div>
           )}

@@ -1,10 +1,8 @@
 import { OpenAI } from 'openai';
-
-import { StreamContext } from '@/app/(chat)/api/chat/types';
+import { CreateCompletionProps } from './types';
 
 const BASE_URL =
   process.env.ARCADE_ENGINE_URL ?? 'https://api.arcade-ai.com/v1'; // Default to the cloud engine
-const USER_ID = process.env.ARCADE_USER_ID ?? 'dev';
 
 // Initialize the OpenAI client
 export const client = new OpenAI({
@@ -13,13 +11,11 @@ export const client = new OpenAI({
 });
 
 // Function to create chat completions
-export const createCompletion = (
-  props: Pick<StreamContext, 'model' | 'messages'>
-) => {
-  const { model, messages } = props;
+export const createCompletion = (props: CreateCompletionProps) => {
+  const { model, messages, userId } = props;
   return client.chat.completions.create({
     model: model.apiIdentifier,
-    user: USER_ID,
+    user: userId,
     messages,
     tool_choice: 'auto',
     stream: true,

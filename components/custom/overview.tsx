@@ -21,7 +21,7 @@ export const Overview = () => {
             alt="Arcade Logo"
             width={32}
             height={64}
-            className="w-auto h-16"
+            className="w-auto h-16 invert dark:invert-0"
           />
         </p>
 

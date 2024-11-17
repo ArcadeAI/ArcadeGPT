@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 
 import { createCompletion } from '@/ai/client';
 import { models } from '@/ai/models';
+import { auth } from '@/app/(auth)/auth';
 
 import { handleToolAuthorizations } from './tool-authorization';
 import { ChatRequestBody, ToolAuthorization } from './types';
@@ -9,6 +10,12 @@ import { ChatRequestBody, ToolAuthorization } from './types';
 export const maxDuration = 60;
 
 export async function POST(request: Request) {
+  const session = await auth();
+  const userEmail = session?.user?.email;
+  if (!userEmail) {
+    return NextResponse.json({ message: 'Not authenticated' }, { status: 401 });
+  }
+
   try {
     const { messages, modelId }: ChatRequestBody = await request.json();
 
@@ -22,11 +29,16 @@ export async function POST(request: Request) {
       async start(controller) {
         try {
           const encoder = new TextEncoder();
-          const response = await createCompletion({ model, messages });
+          const response = await createCompletion({
+            userId: userEmail,
+            model,
+            messages,
+          });
 
           let toolAuthorizations: Array<ToolAuthorization> = [];
           for await (const chunk of response) {
             // Check for tool authorizations
+            // @ts-ignore - Arcade AI injects this property into the response
             const authorizations = chunk?.choices?.[0]?.tool_authorizations;
             if (authorizations) {
               toolAuthorizations = authorizations;
@@ -39,7 +51,7 @@ export async function POST(request: Request) {
 
           // If there are tool authorizations, handle them
           if (toolAuthorizations.length > 0) {
-            await handleToolAuthorizations({
+            await handleToolAuthorizations(userEmail, {
               model,
               messages,
               encoder,
