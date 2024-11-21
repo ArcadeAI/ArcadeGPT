@@ -32,7 +32,7 @@ const suggestedActions = [
     action: 'Star the ArcadeAI/arcade-ai repo on Github',
   },
   {
-    title: 'Search for recent tweets by Arcade AI (@tryarcade)',
+    title: 'Search recent tweets by Arcade AI (@tryarcade)',
     label: 'on twitter (x)',
     action: 'Search for recent tweets by @tryarcade and tell me about them',
   },
@@ -156,7 +156,9 @@ export function MultimodalInput({
                 }}
                 className="text-left border rounded-xl px-4 py-3.5 text-sm flex-1 gap-1 sm:flex-col w-full h-auto justify-start items-start flex-wrap"
               >
-                <span className="font-medium">{suggestedAction.title}</span>
+                <span className="font-medium truncate w-full">
+                  {suggestedAction.title}
+                </span>
                 <span className="text-muted-foreground">
                   {suggestedAction.label}
                 </span>
