@@ -15,15 +15,26 @@ import { useLocalStorage, useWindowSize } from 'usehooks-ts';
 
 import { sanitizeUIMessages } from '@/lib/utils';
 
-import { ArrowUpIcon, StopIcon } from './icons';
 import { Button } from '../ui/button';
 import { Textarea } from '../ui/textarea';
+import { ArrowUpIcon, StopIcon } from './icons';
 
 const suggestedActions = [
+  {
+    title: 'What actions can you take for me?',
+    label: 'supported by Arcade AI',
+    action:
+      'What tools can you use? list them all by paraphrased name and description',
+  },
   {
     title: 'Star the ArcadeAI/arcade-ai repo',
     label: 'on Github',
     action: 'Star the ArcadeAI/arcade-ai repo',
+  },
+  {
+    title: 'Search for recent tweets by Arcade AI (@tryarcade)',
+    label: 'on twitter (x)',
+    action: 'Search for recent tweets by @tryarcade and tell me about them',
   },
   {
     title: 'Look through my last 10 emails',
