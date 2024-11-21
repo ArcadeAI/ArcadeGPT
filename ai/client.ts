@@ -1,5 +1,6 @@
 import { OpenAI } from 'openai';
 import type { CreateCompletionProps } from './types';
+import { systemPrompt } from './prompts';
 
 const BASE_URL =
   process.env.ARCADE_ENGINE_URL ?? 'https://api.arcade-ai.com/v1'; // Default to the cloud engine
@@ -16,7 +17,13 @@ export const createCompletion = (props: CreateCompletionProps) => {
   return client.chat.completions.create({
     model: model.apiIdentifier,
     user: userId,
-    messages,
+    messages: [
+      {
+        role: 'system',
+        content: systemPrompt,
+      },
+      ...messages,
+    ],
     tool_choice: 'auto',
     stream: true,
   });
