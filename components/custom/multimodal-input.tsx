@@ -22,7 +22,7 @@ import { Textarea } from '../ui/textarea';
 const suggestedActions = [
   {
     title: 'What actions can you take for me?',
-    label: 'supported by Arcade AI',
+    label: 'powered by Arcade AI',
     action:
       'What tools can you use? list them all by paraphrased name and description',
   },

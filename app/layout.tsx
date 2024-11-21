@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://arcade-ai.com'),
   title: 'Arcade AI Chat',
   description:
-    'hat with Archer, an AI assistant built by Arcade AI with access to \
+    'Chat with Archer, an AI assistant built by Arcade AI with access to \
   services like Google, Spotify, and more.',
 };
 
