@@ -21,9 +21,20 @@ import { Textarea } from '../ui/textarea';
 
 const suggestedActions = [
   {
-    title: 'Start the',
-    label: 'ArcadeAI/arcade-ai repo',
-    action: 'Start the ArcadeAI/arcade-ai repo',
+    title: 'What actions can you take for me?',
+    label: 'powered by Arcade AI',
+    action:
+      'What tools can you use? list them all by paraphrased name and description',
+  },
+  {
+    title: 'Star the ArcadeAI/arcade-ai repo',
+    label: 'on Github',
+    action: 'Star the ArcadeAI/arcade-ai repo on Github',
+  },
+  {
+    title: 'Search recent tweets by Arcade AI (@tryarcade)',
+    label: 'on twitter (x)',
+    action: 'Search for recent tweets by @tryarcade and tell me about them',
   },
   {
     title: 'Look through my last 10 emails',
@@ -145,7 +156,9 @@ export function MultimodalInput({
                 }}
                 className="text-left border rounded-xl px-4 py-3.5 text-sm flex-1 gap-1 sm:flex-col w-full h-auto justify-start items-start flex-wrap"
               >
-                <span className="font-medium">{suggestedAction.title}</span>
+                <span className="font-medium truncate w-full">
+                  {suggestedAction.title}
+                </span>
                 <span className="text-muted-foreground">
                   {suggestedAction.label}
                 </span>
