@@ -7,11 +7,7 @@
         "build": "next build",
         "start": "next start",
         "clean:cache": "rm -rf .next",
-        "lint": "next lint",
-        "build:worker": "cloudflare",
-        "dev:worker": "wrangler dev --port 8771",
-        "preview:worker": "pnpm run build:worker && pnpm run dev:worker",
-        "deploy:worker": "pnpm run build:worker && wrangler deploy"
+        "lint": "next lint"
     },
     "dependencies": {
         "@ai-sdk/openai": "1.0.0-canary.3",
@@ -52,7 +48,6 @@
         "zod": "^3.23.8"
     },
     "devDependencies": {
-        "@opennextjs/cloudflare": "^0.2.1",
         "@tailwindcss/typography": "^0.5.15",
         "@types/node": "^20.17.6",
         "@types/react": "^18.3.12",

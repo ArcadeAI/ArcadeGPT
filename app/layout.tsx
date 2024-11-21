@@ -7,8 +7,9 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://arcade-ai.com'),
-  title: 'Arcade AI Chatbot',
-  description: 'Explore and enjoy testing your tools with our platform.',
+  title: 'Arcade AI Chat',
+  description: 'Chat with Archer, an AI assistant built by Arcade AI with access to \
+  service like Google, Spotify, and more.',
 };
 
 export const viewport = {

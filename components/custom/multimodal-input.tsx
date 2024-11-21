@@ -21,9 +21,9 @@ import { Textarea } from '../ui/textarea';
 
 const suggestedActions = [
   {
-    title: 'Start the',
-    label: 'ArcadeAI/arcade-ai repo',
-    action: 'Start the ArcadeAI/arcade-ai repo',
+    title: 'Star the ArcadeAI/arcade-ai repo',
+    label: 'on Github',
+    action: 'Star the ArcadeAI/arcade-ai repo',
   },
   {
     title: 'Look through my last 10 emails',

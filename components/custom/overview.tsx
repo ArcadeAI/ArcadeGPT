@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-import { MessageIcon, VercelIcon } from './icons';
 
 export const Overview = () => {
   return (
@@ -25,6 +24,10 @@ export const Overview = () => {
           />
         </p>
 
+        <p>
+          Archer is an AI assistant that can connect to
+          services like Google, Spotify, and more using Arcade AI.
+        </p>
         <p>
           You can learn more about Arcade by visiting our{' '}
           <Link
