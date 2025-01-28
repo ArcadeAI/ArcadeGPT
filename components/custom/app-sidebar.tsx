@@ -78,7 +78,7 @@ export function AppSidebar({ user }: { user?: User }) {
                 className="flex flex-row gap-3 items-center"
               >
                 <span className="text-lg font-semibold px-2 hover:bg-muted rounded-md cursor-pointer">
-                  Arcade AI
+                  Arcade
                 </span>
               </div>
               <div className="flex flex-row gap-2">

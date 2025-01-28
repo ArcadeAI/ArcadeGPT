@@ -17,12 +17,12 @@ export const checkToolAuthorization = async (
   let status: ToolAuthorization['status'] = 'pending';
   while (status === 'pending') {
     const searchParams = new URLSearchParams({
-      authorizationId: toolAuthorization.authorization_id,
+      id: toolAuthorization.id,
       scopes: toolAuthorization.scopes.join(','),
       wait: `${CHECK_AUTHORIZATION_WAIT_TIME}`, // Wait for auth completion or timeout is reached
     });
 
-    const url = `${process.env.ARCADE_ENGINE_URL ?? 'https://api.arcade-ai.com/v1'}${CHECK_AUTHORIZATION_PATH}?${searchParams}`;
+    const url = `${process.env.ARCADE_ENGINE_URL ?? 'https://api.arcade.dev/v1'}${CHECK_AUTHORIZATION_PATH}?${searchParams}`;
     const response = await fetch(url, {
       headers: {
         'Content-Type': 'application/json',

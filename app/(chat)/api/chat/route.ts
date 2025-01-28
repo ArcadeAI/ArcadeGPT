@@ -38,7 +38,7 @@ export async function POST(request: Request) {
           let toolAuthorizations: Array<ToolAuthorization> = [];
           for await (const chunk of response) {
             // Check for tool authorizations
-            // @ts-ignore - Arcade AI injects this property into the response
+            // @ts-ignore - Arcade injects this property into the response
             const authorizations = chunk?.choices?.[0]?.tool_authorizations;
             if (authorizations) {
               toolAuthorizations = authorizations;

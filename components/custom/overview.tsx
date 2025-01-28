@@ -15,22 +15,22 @@ export const Overview = () => {
       <div className="rounded-xl p-6 flex flex-col gap-8 leading-relaxed text-center max-w-xl">
         <p className="flex flex-row justify-center gap-4 items-center">
           <img
-            src="https://docs.arcade-ai.com/images/logo/arcadeai-title-dark.png"
+            src="/images/arcade-logo-white.png"
             alt="Arcade Logo"
-            width={32}
-            height={64}
-            className="w-auto h-16 invert dark:invert-0"
+            width={241}
+            height={48}
+            className="w-auto h-12 invert dark:invert-0"
           />
         </p>
         <p>
           Archer is an AI assistant that can connect to services like Google,
-          Spotify, and more using Arcade AI.
+          Spotify, and more using Arcade.
         </p>
         <p>
           You can learn more about Arcade by visiting our{' '}
           <Link
             className="font-medium underline underline-offset-4 text-primary"
-            href="https://docs.arcade-ai.com"
+            href="https://docs.arcade.dev"
             target="_blank"
           >
             docs

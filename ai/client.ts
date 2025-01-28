@@ -2,8 +2,7 @@ import { OpenAI } from 'openai';
 import type { CreateCompletionProps } from './types';
 import { systemPrompt } from './prompts';
 
-const BASE_URL =
-  process.env.ARCADE_ENGINE_URL ?? 'https://api.arcade-ai.com/v1'; // Default to the cloud engine
+const BASE_URL = process.env.ARCADE_ENGINE_URL ?? 'https://api.arcade.dev/v1'; // Default to the cloud engine
 
 // Initialize the OpenAI client
 export const client = new OpenAI({

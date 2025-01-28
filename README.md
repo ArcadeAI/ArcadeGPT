@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="https://arcade-ai.com/">
-    <h1 align="center">Arcade AI Chatbot</h1>
+  <a href="https://arcade.dev/">
+    <h1 align="center">Arcade Chatbot</h1>
   </a>
 </p>
 
 <p align="center">
-  A chatbot interface for Arcade AI tools, built with Next.js and the Arcade AI SDK.
+  A chatbot interface for Arcade tools, built with Next.js and the Arcade SDK.
   Based on the <a href="https://github.com/vercel/ai-chatbot">Vercel AI Chatbot</a> template.
 </p>
 
@@ -24,9 +24,9 @@
 
 ## Features
 
-- 🤖 Interactive chatbot interface for Arcade AI tools
+- 🤖 Interactive chatbot interface for Arcade tools
 - ⚡️ Built with Next.js for optimal performance
-- 🛠 Seamless integration with Arcade AI SDK
+- 🛠 Seamless integration with Arcade SDK
 - 🔄 Support for both cloud and local development environments
 - 💬 Real-time chat interactions
 - 🎨 Clean and intuitive user interface
@@ -37,7 +37,7 @@ Before you begin, ensure you have installed:
 
 - Node.js 18.x or later
 - pnpm (recommended) or another package manager
-- An Arcade AI account with API access
+- An Arcade account with API access
 
 ## Installation
 
@@ -68,7 +68,7 @@ Configure the following environment variables:
 
 | Variable            | Required | Default   | Description                 |
 | ------------------- | -------- | --------- | --------------------------- |
-| `ARCADE_API_KEY`    | Yes      | -         | Your Arcade AI API key      |
+| `ARCADE_API_KEY`    | Yes      | -         | Your Arcade API key      |
 | `ARCADE_ENGINE_URL` | No       | Cloud URL | Engine URL (Local or Cloud) |
 | `ARCADE_USER_ID`    | No       | 'dev'     | Your Arcade user ID         |
 
@@ -90,7 +90,7 @@ pnpm dev
 
 To develop and test your own tools:
 
-1. Follow the [Arcade AI documentation](https://docs.arcade-ai.com/home/build-tools/create-a-toolkit) to create your toolkit
+1. Follow the [Arcade documentation](https://docs.arcade.dev/home/build-tools/create-a-toolkit) to create your toolkit
 
 2. Start the local engine and actor:
 

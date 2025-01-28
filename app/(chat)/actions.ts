@@ -6,7 +6,7 @@ import { cookies } from 'next/headers';
 
 const arcade = createOpenAI({
   apiKey: process.env.ARCADE_API_KEY,
-  baseURL: process.env.ARCADE_ENGINE_URL ?? 'https://api.arcade-ai.com/v1',
+  baseURL: process.env.ARCADE_ENGINE_URL ?? 'https://api.arcade.dev/v1',
 });
 
 export async function saveModelId(model: string) {

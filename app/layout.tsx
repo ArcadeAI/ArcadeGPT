@@ -6,10 +6,10 @@ import { ThemeProvider } from '@/components/custom/theme-provider';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://arcade-ai.com'),
-  title: 'Arcade AI Chat',
+  metadataBase: new URL('https://arcade.dev'),
+  title: 'Arcade Chat',
   description:
-    'Chat with Archer, an AI assistant built by Arcade AI with access to \
+    'Chat with Archer, an AI assistant built by Arcade with access to \
   services like Google, Spotify, and more.',
 };
 

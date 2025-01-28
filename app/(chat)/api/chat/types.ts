@@ -16,8 +16,10 @@ export interface StreamContext {
 }
 
 export interface ToolAuthorization {
-  authorization_url: string;
-  authorization_id: string;
+  url: string;
+  id: string;
+  provider_id: string;
+  user_id: string;
   status: 'pending' | 'completed' | 'failed';
   context: Record<string, any>;
   scopes: Array<string>;

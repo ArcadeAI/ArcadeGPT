@@ -22,7 +22,7 @@ import { Textarea } from '../ui/textarea';
 const suggestedActions = [
   {
     title: 'What actions can you take for me?',
-    label: 'powered by Arcade AI',
+    label: 'powered by Arcade',
     action:
       'What tools can you use? list them all by paraphrased name and description',
   },
@@ -32,7 +32,7 @@ const suggestedActions = [
     action: 'Star the ArcadeAI/arcade-ai repo on Github',
   },
   {
-    title: 'Search recent tweets by Arcade AI (@tryarcade)',
+    title: 'Search recent tweets by Arcade (@tryarcade)',
     label: 'on twitter (x)',
     action: 'Search for recent tweets by @tryarcade and tell me about them',
   },
