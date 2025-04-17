@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> ArcadeGPT has been upgraded to the [Arcade Vercel AI Template](https://github.com/ArcadeAI/arcade-vercel-ai-template), the new and recommended way to integrate Arcade with the Vercel AI SDK. Check it out for a smoother, more powerful experience!
+
+
 <p align="center">
   <a href="https://arcade.dev/">
     <h1 align="center">Arcade Chatbot</h1>
